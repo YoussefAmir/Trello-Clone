@@ -22,5 +22,3 @@ I wanted to freshed up on RoR newest versions so I used the most up-to-date vers
 
 * Database initialization
 - Run rails db:migrate
-
-* Deployment instructions
