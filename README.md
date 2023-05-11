@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This is a Trello clone based on an intermidate GoRails lesson covering Ruby on Rails with Vue.
+I wanted to freshed up on RoR newest versions so I used the most up-to-date versions for this project, along with Vue3 for Frontend!
 
 * Ruby version
+- Using ruby 3.1.2p20
 
 * System dependencies
+- Rails 7.0.4.3
+- Node v18.14.0
 
-* Configuration
+* Initalizations to run the code:
+- Install Ruby
+- Run `bundle install`
+- Run `bundle exec vite install`
+- Run `npm i`
 
-* Database creation
+* Run the code
+- Terminal 1: `bin/vite dev`
+- Terminal 2: `rails s`
 
 * Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
+- Run rails db:migrate
 
 * Deployment instructions
-
-* ...
