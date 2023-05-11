@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^15.1.0",
+    "postcss-preset-env": "^8.3.2",
+    "vite": "^4.3.0",
+    "vite-plugin-ruby": "^3.2.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.2.1",
+    "vite-plugin-full-reload": "^1.0.5"
+  }
+}
