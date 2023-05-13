@@ -7,7 +7,9 @@
     "vite-plugin-ruby": "^3.2.0"
   },
   "dependencies": {
+    "@rails/ujs": "^7.0.4-3",
     "@vitejs/plugin-vue": "^4.2.1",
-    "vite-plugin-full-reload": "^1.0.5"
+    "vite-plugin-full-reload": "^1.0.5",
+    "vuedraggable": "^2.24.3"
   }
 }
