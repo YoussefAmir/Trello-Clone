@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   plugins: [
     RubyPlugin(),
-    FullReload(["config/routes.rb", "app/views/**/*"], {delay: 200}),
+    FullReload(["config/routes.rb", "app/views/**/*", "app/javascript/components/*"], {delay: 200}),
     vue()
   ],
 })
