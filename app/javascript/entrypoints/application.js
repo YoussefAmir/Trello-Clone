@@ -28,7 +28,6 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // import '~/index.css'
 
 import { createApp } from "vue/dist/vue.esm-bundler";
-// import Vue from "vue"
 import App from "../components/app.vue"
 
 var element = document.querySelector("#boards")
