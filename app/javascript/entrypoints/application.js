@@ -30,14 +30,17 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 import { createApp } from "vue/dist/vue.esm-bundler";
 import App from "../components/app.vue"
 
+window.store = {}
 var element = document.querySelector("#boards")
 if (element != null){
+    window.store.lists = JSON.parse(element.dataset.lists)
+
     const app = createApp({
         el: element,
-        data: function() {
-            return {lists: JSON.parse(element.dataset.lists)}
-        },
+        data: function(){ return window.store },
         template: "<App :original_lists='lists' />",
         components: { App }
     }).mount("#boards")
 }
+
+
