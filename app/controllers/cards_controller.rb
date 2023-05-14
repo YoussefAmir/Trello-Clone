@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  before_action :set_card, only: %i[ show edit update destroy ]
+  before_action :set_card, only: %i[ show edit update destroy move]
 
   # GET /cards or /cards.json
   def index
@@ -55,6 +55,12 @@ class CardsController < ApplicationController
       format.html { redirect_to cards_url, notice: "Card was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def move
+    @card.update(list_id: card_params[:list_id].to_i)
+    @card.insert_at(card_params[:position].to_i)
+    render action: :show
   end
 
   private
