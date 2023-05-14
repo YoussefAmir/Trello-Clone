@@ -10,6 +10,6 @@
     "@rails/ujs": "^7.0.4-3",
     "@vitejs/plugin-vue": "^4.2.1",
     "vite-plugin-full-reload": "^1.0.5",
-    "vuedraggable": "^2.24.3"
+    "vue-draggable-next": "^2.1.1"
   }
 }
