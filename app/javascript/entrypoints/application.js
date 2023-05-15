@@ -28,18 +28,19 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // import '~/index.css'
 
 import { createApp } from "vue/dist/vue.esm-bundler";
-import App from "../components/app.vue"
+import broad from "../components/board.vue"
 
-window.store = {}
+window.store = {lists: "default"}
+
 var element = document.querySelector("#boards")
 if (element != null){
     window.store.lists = JSON.parse(element.dataset.lists)
 
     const app = createApp({
         el: element,
-        data: function(){ return window.store },
-        template: "<App :original_lists='lists' />",
-        components: { App }
+        data: function(){return window.store},
+        template: "<broad :original_lists='lists' />",
+        components: { broad }
     }).mount("#boards")
 }
 
