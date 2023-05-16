@@ -28,18 +28,37 @@ console.log('Visit the guide for more information: ', 'https://vite-ruby.netlify
 // import '~/index.css'
 
 import { createApp } from "vue/dist/vue.esm-bundler";
+import Vuex from "vuex"
 import broad from "../components/board.vue"
 
-window.store = {lists: "default"}
+window.store = new Vuex.Store({
+    state: {
+        lists: []
+    },
+    mutations: {
+        addList(state, data){
+            state.lists.push(data)
+        },
+        addCard(state, data){
+            const index = state.lists.findIndex((item) => item.id == data.list_id)
+            state.lists[index].cards.push(data)
+        },
+        editCard(state, data){
+            const list_index = state.lists.findIndex((item) => item.id == data.list_id)
+            const card_index = state.lists[list_index].cards.findIndex((item) => item.id == data.id)
+            state.lists[list_index].cards.splice(card_index, 1, data)
+        }
+    }
+})
 
 var element = document.querySelector("#boards")
 if (element != null){
-    window.store.lists = JSON.parse(element.dataset.lists)
+    window.store.state.lists = JSON.parse(element.dataset.lists)
 
     const app = createApp({
         el: element,
-        data: function(){return window.store},
-        template: "<broad :original_lists='lists' />",
+        store: window.store,
+        template: "<broad />",
         components: { broad }
     }).mount("#boards")
 }
