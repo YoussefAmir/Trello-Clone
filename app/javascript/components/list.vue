@@ -8,7 +8,7 @@
 
         <a v-if="!editing" v-on:click="startEditing">Add a card</a>
         <textarea v-if="editing" ref="message" v-model="message" class="form-control mb-2"></textarea>
-        <button v-if="editing" v-on:click="submitMessge" class="btn btn-secondary me-1">Add</button>
+        <button v-if="editing" v-on:click="createCard" class="btn btn-secondary me-1">Add</button>
         <a v-if="editing" v-on:click="editing=false">Cancel</a>
     </div>
 </template>
@@ -37,7 +37,7 @@ export default{
             if (evt == undefined){ return }
             
             var card_id = evt.element.id
-            const list_index = window.store.lists.findIndex((list) => {
+            const list_index = store.state.lists.findIndex((list) => {
                 return list.cards.find((card) => {
                 return card.id == card_id
                 })
@@ -45,7 +45,7 @@ export default{
 
             var data = new FormData
             data.append("card[position]", evt.newIndex + 1)
-            data.append("card[list_id]", window.store.lists[list_index].id)
+            data.append("card[list_id]", store.state.lists[list_index].id)
 
             Rails.ajax({
                 url: `/cards/${card_id}/move`,
@@ -54,7 +54,7 @@ export default{
                 dataType: "json"
             })
         },
-        submitMessge: function(){
+        createCard: function(){
             var data = new FormData
             data.append("card[list_id]", this.list.id)
             data.append("card[name]", this.message)
@@ -65,7 +65,7 @@ export default{
                 data: data,
                 dataType: "json",
                 success: (data) => {
-                    this.list.cards.push(data)
+                    store.commit("addCard", data)
                     this.message = ""
                     this.$nextTick(() => { this.$refs.message.focus() })
                 }
@@ -78,15 +78,5 @@ export default{
 <style scoped>
 .dragArea {
   min-height: 20px;
-}
-
-.list {
-  background: lightgray;
-  border-radius: 3px;
-  width: 270px;
-  vertical-align: top;
-  margin-right: 20px;
-  padding: 20px;
-  display: inline-block;
 }
 </style>
