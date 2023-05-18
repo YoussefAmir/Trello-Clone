@@ -25,4 +25,4 @@ I wanted to freshed up on RoR newest versions so I used the most up-to-date vers
 # Preview
 <br>
 
-![trello-clone-preview](https://im4.ezgif.com/tmp/ezgif-4-b651805291.gif)
+![trello-clone-preview](https://s12.gifyu.com/images/trello-clone-preview.gif)
