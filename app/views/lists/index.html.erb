@@ -1,7 +1,6 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Lists</h1>
-<%= link_to "New list", new_list_path %>
 <hr />
 
 <%= tag.div id: :boards, data: { lists: @lists.to_json(include: :cards) } %>
