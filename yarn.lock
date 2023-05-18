@@ -305,6 +305,11 @@
     "@vue/compiler-dom" "3.2.47"
     "@vue/shared" "3.2.47"
 
+"@vue/devtools-api@^6.0.0-beta.11":
+  version "6.5.0"
+  resolved "https://registry.npmjs.org/@vue/devtools-api/-/devtools-api-6.5.0.tgz"
+  integrity sha512-o9KfBeaBmCKl10usN4crU53fYtC1r7jJwdGKjPT24t348rHxgfpZ0xL3Xm/gLUYnc0oTp8LAmrxOeLyu6tbk2Q==
+
 "@vue/reactivity-transform@3.2.47":
   version "3.2.47"
   resolved "https://registry.npmjs.org/@vue/reactivity-transform/-/reactivity-transform-3.2.47.tgz"
@@ -1009,7 +1014,7 @@ vue-draggable-next@^2.1.1:
   resolved "https://registry.npmjs.org/vue-draggable-next/-/vue-draggable-next-2.1.1.tgz"
   integrity sha512-f5lmA7t6LMaL4viR7dU30zzvqJzaKQs0ymL0Jy9UDT9uiZ2tXF3MzPzEvpTH2UODXZJkT+SnjeV1fXHMsgXLYA==
 
-vue@^3.2.2, vue@^3.2.25, vue@3.2.47:
+vue@^3.2.0, vue@^3.2.2, vue@^3.2.25, vue@3.2.47:
   version "3.2.47"
   resolved "https://registry.npmjs.org/vue/-/vue-3.2.47.tgz"
   integrity sha512-60188y/9Dc9WVrAZeUVSDxRQOZ+z+y5nO2ts9jWXSTkMvayiWxCWOWtBQoYjLeccfXkiiPZWAHcV+WTPhkqJHQ==
@@ -1019,3 +1024,10 @@ vue@^3.2.2, vue@^3.2.25, vue@3.2.47:
     "@vue/runtime-dom" "3.2.47"
     "@vue/server-renderer" "3.2.47"
     "@vue/shared" "3.2.47"
+
+vuex@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.npmjs.org/vuex/-/vuex-4.1.0.tgz"
+  integrity sha512-hmV6UerDrPcgbSy9ORAtNXDr9M4wlNP4pEFKye4ujJF8oqgFFuxDCdOLS3eNoRTtq5O3hoBDh9Doj1bQMYHRbQ==
+  dependencies:
+    "@vue/devtools-api" "^6.0.0-beta.11"
