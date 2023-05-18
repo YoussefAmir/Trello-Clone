@@ -1,26 +1,28 @@
 # README
 
-This is a Trello clone based on an intermidate GoRails lesson covering Ruby on Rails with Vue.
+This is a Trello clone based on an intermidate GoRails lesson covering Ruby on Rails with Vue. <br>
 I wanted to freshed up on RoR newest versions so I used the most up-to-date versions for this project, along with Vue3 for Frontend!
 
-* Ruby version
-- Using ruby 3.1.2p20
+### Ruby version
+- Ruby 3.1.2
 
-* System dependencies
+### System dependencies
 - Rails 7.0.4.3
-- Node v18.14.0
+- Node 18.14.0
 
-* Initalizations to run the code:
-- Install Ruby
+### Initalizations to run the code:
+- Install Ruby 3.1.2
+- Install Node 18.14.0
 - Run `bundle install`
-- Run `bundle exec vite install`
-- Run `npm i`
+- Run `bundle exec vite install` for running Vue with Vite
+- Run `npm install`
+- Run `rails db:migrate` for Database initialization
 
-* Run the code
-- Terminal 1: `bin/vite dev`
-- Terminal 2: `rails s`
+### Run the code
+- `rails s`
+- Optioanl Terminal: `bin/vite dev` for hot reload
 
-* Database initialization
-- Run rails db:migrate
+# Preview
+<br>
 
-* Deployment instructions
+![trello-clone-preview](https://github.com/YoussefAmir/Trello-Clone/assets/45663642/43f8a3cf-e380-4b1b-a7dd-3c61ebcb5e40)
